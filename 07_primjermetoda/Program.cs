@@ -5,7 +5,7 @@ namespace _07_primjermetoda
 {
     class Program
     {
-        
+
 
         static void Main(string[] args)
         {
@@ -56,7 +56,8 @@ namespace _07_primjermetoda
                     }
 
                 }
-                else {
+                else
+                {
                     if (item % 2 != 0)
                     {
                         rezultat.Add(item);

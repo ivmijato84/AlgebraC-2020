@@ -60,30 +60,37 @@ namespace cheatsheet
                 Console.WriteLine("pronasli smo osobe na ve " + item);
             }
 
+
+            // Osoba defaultOsoba = new Osoba { Ime = "Jane", Prezime = "Doe" };
+            // defaultna osoba se instancira jedino uslucaju  kada u listi nema osoba koja sadrzi"xa" u imenu
             var osobe_na = (
             from tr_os      // postavimo ime varijable za svaki element kolekcije
-            in osobe.DefaultIfEmpty(new Osoba { Ime = "Jane", Prezime = "Doe" })        // kolekcija iz koje radimo pretragu
+            in osobe       // kolekcija iz koje radimo pretragu
             where tr_os.Ime.Contains("xa")  // filter
-            select tr_os.Prezime   // selektiramo kompletan element
-            ).ToList();
+            select tr_os.Prezime  // selektiramo kompletan element
+            ).DefaultIfEmpty(new Osoba { Ime = "Jane", Prezime = "Doe" }.Prezime).ToList();
 
             foreach (var item in osobe_na)
             {
-                Console.WriteLine("Prezime osobe koja u imenu ima 'na'" + item);
+                Console.WriteLine("Pronasli smo defaultnu osoba :  " + item);
             }
 
+
             // primjer u array
+            // default osoba instancirana
+            Osoba defaultOsoba = new Osoba { Ime = "Jane", Prezime = "Doe" };
+           
             string[] niz_osobe_na = (
                 from tr_os      // postavimo ime varijable za svaki element kolekcije
-                in osobe.DefaultIfEmpty(new Osoba { Ime = "Jane", Prezime = "Doe" }) //  Ne radi, provjeri zasto
+                in osobe        // kolekcija iz koje radimo pretragu
                 where tr_os.Ime.Contains("xy")  // filter
                 select tr_os.Prezime   // selektiramo kompletan element
-                ).ToArray();
+                ).DefaultIfEmpty(defaultOsoba.Prezime).ToArray();
 
-            Console.WriteLine("Ispis iz niza stringova");
+            
             foreach (var item in niz_osobe_na)
             {
-                Console.WriteLine("Prezime osobe koja u imenu ima 'na'" + item);
+                Console.WriteLine("Defaultna osoba koja u imenu nema 'xy' je: " + item);
             }
 
 
@@ -95,7 +102,7 @@ namespace cheatsheet
             select tr_os.Prezime   // selektiramo kompletan element
             ).FirstOrDefault();
 
-            Console.WriteLine("pronasli smo defaultnu odsobu: " + osobe_def);
+            //Console.WriteLine("pronasli smo defaultnu odsobu: " + osobe_def);
         }
     }
 }
