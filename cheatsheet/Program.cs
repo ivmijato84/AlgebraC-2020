@@ -94,10 +94,12 @@ namespace cheatsheet
             }
 
 
+
+            //     ---->    PRIMJER DefaultIfEmpty() , hvala Jasmin Medved
             // primjer first ili default
             var osobe_def = (
             from tr_os      // postavimo ime varijable za svaki element kolekcije
-            in osobe.DefaultIfEmpty(new Osoba { Ime = "Jane", Prezime = "Doe" })        // kolekcija iz koje radimo pretragu
+            in osobe        // kolekcija iz koje radimo pretragu
             where tr_os.Ime.Contains("xx")  // filter
             select tr_os.Prezime   // selektiramo kompletan element
             ).FirstOrDefault();
