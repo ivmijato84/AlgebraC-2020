@@ -32,7 +32,7 @@ namespace BazaPoklona.Controllers
 
         // GET: VrstaRobes
         public async Task<IActionResult> OstvareniPromet()
-        {            
+        {
             var dbPoklons = await _context.Poklons.ToListAsync();
 
             var results = from p in dbPoklons
@@ -46,7 +46,20 @@ namespace BazaPoklona.Controllers
                               Cijena = newData.Sum(x => x.Cijena)
                           };
 
-            return View(results);            
+            return View(results);
+        }
+         public async Task<IActionResult> OstvareniPrometNew()
+         {
+
+
+
+                var promet = _context.OstvareniPrometViewModels.FromSqlRaw(
+               @"SELECT max(dbo.Poklon.Naziv) as NazivRobe, max(dbo.VrstaRobe.Naziv) AS VrstaRobe, SUM(Cijena) AS UkupnoLovePoVrstiRobe FROM dbo.Poklon
+JOIN dbo.VrstaRobe ON dbo.Poklon.VrstaRobe = dbo.VrstaRobe.Id
+ GROUP BY VrstaRobe");
+            return View(promet);
+
+            
 
         }
 
