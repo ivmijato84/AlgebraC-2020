@@ -33,6 +33,8 @@ namespace BazaPoklona.Models
         // Data annotation ne radi, koristio je FLUENT API
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<OstvareniPrometViewModel>().HasNoKey();
+
             modelBuilder.HasAnnotation("Relational:Collation", "Croatian_CI_AS");
 
             modelBuilder.Entity<Poklon>(entity =>
@@ -80,6 +82,8 @@ namespace BazaPoklona.Models
                     .HasMaxLength(40);
             });
             modelBuilder.Entity<OstvareniPrometViewModel>().HasNoKey();
+
+           // modelBuilder.Entity<OstvareniPrometViewModel>().HasNoKey();
 
             OnModelCreatingPartial(modelBuilder);
         }
