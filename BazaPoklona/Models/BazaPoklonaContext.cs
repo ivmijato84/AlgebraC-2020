@@ -21,6 +21,7 @@ namespace BazaPoklona.Models
         public virtual DbSet<Trgovina> Trgovinas { get; set; }
         public virtual DbSet<VrstaRobe> VrstaRobes { get; set; }
         public DbSet<OstvareniPrometViewModel> OstvareniPrometViewModels { get; set; }
+        public DbSet<OstvareniPromet> OstvareniPromet { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -83,7 +84,7 @@ namespace BazaPoklona.Models
             });
             modelBuilder.Entity<OstvareniPrometViewModel>().HasNoKey();
 
-           // modelBuilder.Entity<OstvareniPrometViewModel>().HasNoKey();
+            // modelBuilder.Entity<OstvareniPrometViewModel>().HasNoKey();
 
             OnModelCreatingPartial(modelBuilder);
         }

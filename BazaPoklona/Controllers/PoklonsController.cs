@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BazaPoklona.Models;
+using System.ComponentModel.DataAnnotations.Schema;
+using Newtonsoft.Json;
 
 namespace BazaPoklona.Controllers
 {
@@ -23,8 +25,29 @@ namespace BazaPoklona.Controllers
         {
             var bazaPoklonaContext = _context.Poklons
                 .Include(p => p.VrstaRobeNavigation);
+           
+            var sviPokloni = _context.Poklons
+                .Include(p => p.VrstaRobeNavigation);
+
+            ViewData["sviPokloni"]= sviPokloni.ToList();
+
+
             return View(await bazaPoklonaContext.ToListAsync());
         }
+
+        // GET: http://localhost:5000/Poklons/IndexJson
+        public IActionResult IndexJson()
+        {
+            var bazaPoklonaContext = _context.Poklons
+                .Include(p => p.VrstaRobeNavigation);
+            
+            //radi
+           // return Json(new Poklon { IdPoklon = 123, Naziv = "Hero",VrstaRobe=1 });
+           
+            //radi baza
+            return Json(_context.Poklons);
+        }
+
         // GET: Poklons/Food
         public async Task<IActionResult> Food()
         {
