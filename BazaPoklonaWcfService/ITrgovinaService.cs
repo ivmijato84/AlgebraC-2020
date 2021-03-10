@@ -12,7 +12,7 @@ namespace BazaPoklonaWcfService
     [ServiceContract]
     public interface ITrgovinaService
     {
-        [OperationContract]
+        [OperationContract] 
         List<Trgovina> DohvatiTrgovine();
     }
 }
