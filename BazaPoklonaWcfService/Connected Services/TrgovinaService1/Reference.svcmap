@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9844e989-544a-4bb5-90e9-95d687cd3889" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54756/TrgovinaService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TrgovinaService.disco" MetadataType="Disco" ID="c4cdfe61-7c7e-47f7-a389-c73ea6faa9bc" SourceId="1" SourceUrl="http://localhost:54756/TrgovinaService.svc?disco" />
+    <MetadataFile FileName="TrgovinaService.xsd" MetadataType="Schema" ID="967980fd-55ed-4921-adc2-f28f949e373e" SourceId="1" SourceUrl="http://localhost:54756/TrgovinaService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TrgovinaService.wsdl" MetadataType="Wsdl" ID="d9267aea-f567-411a-a63e-e3ba9475e806" SourceId="1" SourceUrl="http://localhost:54756/TrgovinaService.svc?wsdl" />
+    <MetadataFile FileName="TrgovinaService1.xsd" MetadataType="Schema" ID="28fb21bd-65c7-4b88-9df8-e7310a73cbc7" SourceId="1" SourceUrl="http://localhost:54756/TrgovinaService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TrgovinaService2.xsd" MetadataType="Schema" ID="e4d42551-3281-490c-b6c3-3afe12b1d8bd" SourceId="1" SourceUrl="http://localhost:54756/TrgovinaService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
