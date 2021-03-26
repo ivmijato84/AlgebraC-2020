@@ -206,6 +206,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fakultet", "Fakultet\Fakult
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BazaPoklona", "BazaPoklona\BazaPoklona.csproj", "{9ECCDAC6-A1E3-4709-8823-55F8C42F6ED6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCsAuth", "MVCsAuth\MVCsAuth.csproj", "{02EB523A-6EE2-494D-A8CF-A8AED33E652A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1FA0D0FA-D85F-4D2D-BD84-787CAB9BF84D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuthGoogle", "OAuthGoogle\OAuthGoogle.csproj", "{F2D26A8C-63C0-421F-AFAB-D3B1104DF535}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BazaPoklonaWcfService", "BazaPoklonaWcfService\BazaPoklonaWcfService.csproj", "{B4312B89-8335-43E1-9E0B-E254728229AF}"
 EndProject
 Global
@@ -471,10 +480,14 @@ Global
 		{9ECCDAC6-A1E3-4709-8823-55F8C42F6ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ECCDAC6-A1E3-4709-8823-55F8C42F6ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ECCDAC6-A1E3-4709-8823-55F8C42F6ED6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4312B89-8335-43E1-9E0B-E254728229AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4312B89-8335-43E1-9E0B-E254728229AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4312B89-8335-43E1-9E0B-E254728229AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4312B89-8335-43E1-9E0B-E254728229AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02EB523A-6EE2-494D-A8CF-A8AED33E652A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02EB523A-6EE2-494D-A8CF-A8AED33E652A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02EB523A-6EE2-494D-A8CF-A8AED33E652A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02EB523A-6EE2-494D-A8CF-A8AED33E652A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2D26A8C-63C0-421F-AFAB-D3B1104DF535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2D26A8C-63C0-421F-AFAB-D3B1104DF535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2D26A8C-63C0-421F-AFAB-D3B1104DF535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2D26A8C-63C0-421F-AFAB-D3B1104DF535}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
